@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="navigation-bar">
+        <div class="logo">
+            <img src="../images/logo.png" alt="bookstore-logo" height="110px">
+        </div>
+
+        <div class="container-fluid"> 
+            <input type="text" size="30" 
+                placeholder="search..." id="searched" class="search-input">
+          
+            <button type="button" class="btn-primary btn-sm search-button"
+                onclick="highlight('0');"> 
+                <i class="fa fa-search"></i> 
+            </button> 
+        </div>
+        
+        
+        <div class="nav-lists">
+            <ul>
+                <a href="../html/index.html"><li>Home</li></a>
+                <a href="../html/add_book.html"><li>Add Book</li></a>
+                <a href="../html/books.html"><li>Buy Now</li></a>
+                <a href=""><li>Favorites</li></a>
+            </ul>
+        </div>   
+    </div>
+    <div class="add-book-body">
+        <div class="book-form">
+            <h1>Add New Book</h1>
+            <form id="form-book">
+                <div class="add-data">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" required>
+                </div>
+                <div class="add-data">
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author" required>
+                </div>
+                <div class="add-data">
+                    <label for="price">Price</label>
+                    <input type="text" name="price" id="price" required>
+                </div>
+                <div class="add-data">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" placeholder="Enter product description..."></textarea>
+                </div>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+    
+        </div>
+    
+        <div class="book-table">
+            <h1>Book Lists</h1>
+            <table class="table-book">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            
+        </div>
+        
+    </div>
+    <div class="buttons">
+        <button class="remove" onclick="removeBook()">Remove</button>
+        <button class="clear" onclick="clearSearchHighlights()">Clear</button>
+    </div>
+    
+    <script src="../js/index.js"></script>
+</body>
+</html>
